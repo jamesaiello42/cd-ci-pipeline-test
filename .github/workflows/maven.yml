@@ -42,3 +42,9 @@ jobs:
         with:
           name: Package
           path: staging
+      - uses: actions/checkout@v2
+      - uses: ncipollo/release-action@v1
+        with:
+           artifacts: "*.jar"
+           bodyFile: "Jars"
+           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
