@@ -1,14 +1,17 @@
 package app;
 
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Getter
 public class Foods {
 
+    private final List<String> foods = List.of("Hamburger", "Chicken", "French Fries", "Doughnuts", "Lobster");
+
     public void displayFood() {
-        List<String> foods = List.of("Hamburger", "Chicken", "French Fries", "Doughnuts", "Lobster");
         foods.forEach(System.out::println);
     }
 }
