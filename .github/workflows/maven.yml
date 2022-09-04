@@ -49,4 +49,4 @@ jobs:
         with:
            artifacts: "*.jar"
            bodyFile: "Jars"
-           token: ${{ secrets.YOUR_GITHUB_TOKEN }}
+           token: ${{ secrets.GITHUB_TOKEN }}
