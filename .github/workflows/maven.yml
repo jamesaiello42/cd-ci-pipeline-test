@@ -6,8 +6,6 @@ name: Java CI with Maven
 on:
   push:
     branches: [ "master" ]
-    tags:
-    - '*'
   pull_request:
     branches: [ "master" ]
 
@@ -47,6 +45,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ncipollo/release-action@v1
         with:
+           tag: ${{ steps.tag_version.outputs.new_tag }}
+           name: Release ${{ steps.tag_version.outputs.new_tag }}
+           body: ${{ steps.tag_version.outputs.changelog }}
            artifacts: "*.jar"
            bodyFile: "Jars"
            token: ${{ secrets.GITHUB_TOKEN }}
