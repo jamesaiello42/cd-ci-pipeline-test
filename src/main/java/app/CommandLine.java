@@ -12,6 +12,9 @@ public class CommandLine implements CommandLineRunner {
 
     @Override
     public void run(String...args) throws Exception {
-        foods.displayFood();
+        foods.displayFoods();
+        foods.getFoods().add("Pasta");
+        System.out.println("Adding Pasta. \nList after food item was added:");
+        foods.displayFoods();
     }
 }
