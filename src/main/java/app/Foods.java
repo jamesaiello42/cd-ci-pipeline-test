@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 public class Foods {
 
-    private ArrayList<String> foods = new ArrayList<>(List.of("Hamburger", "Chicken", "French Fries", "Doughnuts", "Lobster"));
+    private ArrayList<String> foods = new ArrayList<>(List.of("Hamburger", "Chicken", "French Fries", "Doughnuts", "Lobster", "Pizza"));
 
     public void displayFoods() {
         foods.forEach(System.out::println);
